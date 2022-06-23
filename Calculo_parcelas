@@ -1,0 +1,27 @@
+  private void btnSair_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            txtValorTotal.Text = "";
+            txtParcela.Text = "";
+            txtResultado.Text = "";
+        }
+
+        private void btnCalcular_Click(object sender, EventArgs e)
+        {
+            //Foram declaradas as variáveis do tipo double: valorT, parcela, resultado.
+            double valorT, parcela, resultado;
+
+            //Variáveis vão receber os valores dos seus respectivos textbox, e converter para numero com o ToDouble.
+            valorT = Convert.ToDouble(txtValorTotal.Text);
+            parcela = Convert.ToDouble(txtParcela.Text);
+
+            //Resultado vai receber a formula do calculo: valorT/parcelas.
+            resultado = valorT / parcela;
+
+            //txtResultado vai receber o valor da variável resultado e converter para text.
+            txtResultado.Text = resultado.ToString();
+        }
